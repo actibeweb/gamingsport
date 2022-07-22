@@ -1,0 +1,51 @@
+<?php
+include('../config/constants.php');
+
+
+
+$cp_id= $_GET['cp_id'];
+
+
+$club_sql = "INSERT INTO tbl_club SET cp_id=$cp_id";
+
+
+$club_res = mysqli_query($conn, $club_sql);
+
+
+
+
+
+if ($club_res == TRUE) {
+
+
+    $sql = "UPDATE tbl_cp_profile SET club=1 WHERE cp_id=$cp_id";
+
+
+    $res = mysqli_query($conn, $sql);
+    
+    
+    
+    if ($res == TRUE) {
+    
+    
+    
+    
+        // echo "Team Member Deleted";
+        $_SESSION['delete'] = "<div class='colorText'>Blog Deleted Sucessfully<div>";
+        echo ("<script>location.href = '" . SITEURL . "/admin/add-club-member.php';</script>");
+    } else {
+        $_SESSION['delete'] = "Blog Deletion failure";
+        echo ("<script>location.href = '" . SITEURL . "/admin/add-club-member.php';</script>");
+        // echo "Team Member not deleted";
+    
+    }
+
+    // echo "Team Member Deleted";
+    $_SESSION['delete'] = "<div class='colorText'>Blog Deleted Sucessfully<div>";
+    echo ("<script>location.href = '" . SITEURL . "/admin/add-club-member.php';</script>");
+} else {
+    $_SESSION['delete'] = "Blog Deletion failure";
+    echo ("<script>location.href = '" . SITEURL . "/admin/add-club-member.php';</script>");
+    // echo "Team Member not deleted";
+
+}

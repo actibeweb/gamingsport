@@ -1,0 +1,436 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from www.ecommerce-admin.com/demo/page-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 16:13:57 GMT -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title> Super ADMIN - RealEstates's Marketing </title>
+
+	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+	<link href="css/bootstrapf9e3.css" rel="stylesheet" type="text/css" />
+
+	<!-- custom style -->
+	<link href="css/uif9e3.css" rel="stylesheet" type="text/css" />
+	<link href="css/responsivef9e3.css" rel="stylesheet" />
+
+	<!-- iconfont -->
+	<link rel="stylesheet" href="fonts/material-icon/css/round.css" />
+
+
+	<style>
+		.table {
+			margin-bottom: 10vw;
+		}
+	</style>
+
+	<style>
+		.suc {
+			text-align: center;
+			font-size: 20px;
+			margin-top: 20px;
+			color: #55bb55;
+		}
+
+		.fail {
+
+			text-align: center;
+			font-size: 20px;
+			margin-top: 20px;
+			color: red;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<b class="screen-overlay"></b>
+
+	<aside class="navbar-aside" id="offcanvas_aside">
+		<div class="aside-top">
+			<a href="index.html" class="brand-wrap" style="font-size: 2vw;text-decoration: none;">
+				Super Admin
+			</a>
+			<div>
+				<button class="btn btn-icon btn-aside-minimize"> <i class="text-muted material-icons md-menu_open"></i>
+				</button>
+			</div>
+		</div> <!-- aside-top.// -->
+
+		<nav>
+			<ul class="menu-aside">
+				<li class="menu-item active">
+					<a class="menu-link" href="index.html"> <i class="icon material-icons md-home"></i>
+						<span class="text">Dashboard</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="visits.html"> <i class="icon material-icons md-help"></i>
+						<span class="text">Visits</span>
+					</a>
+				</li>
+
+
+				<li class="menu-item">
+					<a class="menu-link" href="sales.html"> <i class="icon material-icons md-money"></i>
+						<span class="text">Sales</span>
+					</a>
+				</li>
+
+
+				<li class="menu-item">
+					<a class="menu-link" href="properties.html"> <i class="icon material-icons md-house"></i>
+						<span class="text">Properties</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="about.html"> <i class="icon material-icons md-computer"></i>
+						<span class="text">Website Details</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="club.html"> <i class="icon material-icons md-people"></i>
+						<span class="text">Club Management</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="channel-partner.html"> <i class="icon material-icons md-work"></i>
+						<span class="text">Active CPs</span>
+					</a>
+				</li>
+				<li class="menu-item">
+					<a class="menu-link" href="channel-partners.html"> <i class="icon material-icons md-plus"></i>
+						<span class="text">Add Channel Partner</span>
+					</a>
+				</li>
+				<li class="menu-item">
+					<a class="menu-link" href="manage-admin.html"> <i class="icon material-icons md-person"></i>
+						<span class="text">Admin</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="review.html"> <i class="icon material-icons md-star"></i>
+						<span class="text">Review</span>
+					</a>
+				</li>
+
+
+			
+
+				<li class="menu-item">
+					<a class="menu-link" href="contact.html"> <i class="icon material-icons md-message"></i>
+						<span class="text">Contact Aplications</span>
+					</a>
+				</li>
+			
+
+			</ul>
+			<br>
+			<br>
+		</nav>
+	</aside>
+
+	<main class="main-wrap">
+		<header class="main-header navbar">
+			<div class="col-search">
+				<form class="searchform">
+					
+					<datalist id="search_terms">
+						<option value="Products">
+						<option value="New orders">
+						<option value="Apple iphone">
+						<option value="Ahmed Hassan">
+					</datalist>
+				</form>
+			</div>
+			<div class="col-nav">
+				<button class="btn btn-icon btn-mobile me-auto" data-trigger="#offcanvas_aside"> <i class="md-28 material-icons md-menu"></i> </button>
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link btn-icon" onclick="darkmode(this)" title="Dark mode" href="#"> <i class="material-icons md-nights_stay"></i> </a>
+					</li>
+
+
+				</ul>
+			</div>
+		</header>
+
+
+	
+	
+
+
+
+
+
+
+<!-- ===========================HTML CONTENT=========================== -->
+<!-- ==========================================================================-->
+
+
+
+
+
+<section class="content-main">
+
+    <div class="content-header">
+        <a href="javascript:history.back()" class="btn btn-light"><i class="material-icons md-arrow_back"></i> Go back
+        </a>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header bg-warning" style="height:150px">
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-xl col-lg flex-grow-0" style="flex-basis:230px">
+                    <div class="img-thumbnail shadow w-100 bg-white position-relative text-center" style="height:190px; width:200px; margin-top:-120px">
+                        <img src="../cp/images/team/<?php if ($member_image !== '') {
+                                                                                                        echo $member_image;
+                                                                                                    } else {
+                                                                                                        echo 'avatar.jpg';
+                                                                                                    } ?>" class="center-xy img-fluid" alt="Logo Brand">
+                    </div>
+                </div> <!--  col.// -->
+                <div class="col-xl col-lg">
+                    <h3><?php echo $member_name; ?></h3>
+                    <p><?php echo $member_address; ?></p>
+                </div> <!--  col.// -->
+            
+            </div> <!-- card-body.// -->
+            <hr class="my-4">
+            <div class="row g-4">
+                <div class="col-md-12 col-lg-4 col-xl-2">
+                    <article class="box">
+                        <p class="mb-0 text-muted">Total sales:</p>
+                        <h5 class="text-success"><?php echo $sale_count ?></h5>
+                        <p class="mb-0 text-muted">Revenue:</p>
+                        <h5 class="text-success mb-0">INR <?php echo $sale_count_in_rupees ?></h5>
+                    </article>
+                </div> <!--  col.// -->
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <h6>Contacts</h6>
+                    <p>
+
+                        <?php echo $member_email; ?><br>
+                        <?php echo $member_phone; ?>
+                    </p>
+                </div> <!--  col.// -->
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <h6>Address</h6>
+                    <p>
+                        Address: <?php echo $member_address; ?> <br>
+                    </p>
+                </div> <!--  col.// -->
+                <div class="col-sm-6 col-xl-4 text-xl-end">
+
+                </div> <!--  col.// -->
+            </div> <!--  row.// -->
+        </div> <!--  card-body.// -->
+    </div> <!--  card.// -->
+
+
+</section> <!-- content-main end// -->
+
+
+
+
+
+<style>
+    .transform-plan:hover {
+        transform: rotateZ(-2deg);
+    }
+</style>
+
+
+<section class="content-main">
+    <div class="content-header">
+        <h2 class="content-title"><?php echo $member_name ?>'s Business Level</h2>
+
+    </div>
+    <div class="row">
+
+
+
+        <?php
+
+        // Get data for particuular level
+
+        $level_sql = "SELECT * FROM tbl_business_plan ";
+        $level_res = mysqli_query($conn, $level_sql);
+
+        if ($level_res == TRUE) {
+            $level_count = mysqli_num_rows($level_res);
+            if ($level_count > 0) {
+
+                while ($level_row = mysqli_fetch_assoc($level_res)) {
+
+
+                    $level = $level_row['level'];
+                    $position = $level_row['position'];
+                    $incentive = $level_row['incentive'];
+                    $target = $level_row['target'];
+                    $salary = $level_row['salary'];
+
+        ?>
+
+
+                    <div class="col-lg-12 transform-plan">
+                        <div class="card card-body mb-4" <?php
+
+                                                            if ($level == $level_id) {
+                                                            ?> style="    box-shadow: rgb(16 16 193 / 21%) 0px 7px 29px 0px;
+                                                        background: #a1a1e1;
+                                                        color: white;" <?php
+
+                                                                    }
+                                                                        ?>>
+                            <article class="icontext">
+                                <span <?php
+
+                                        if ($level == $level_id) {
+                                        ?> style="   
+                                                            background-color: rgb(235 255 237) !important;
+                                                            " <?php
+
+                                                            }
+                                                                ?> class="icon icon-sm rounded-circle bg-success-light"><i class="text-success material-icons md-one"><?php echo $level; ?></i></span>
+                                <div class="text" style="display: flex;width: 100%;justify-content: space-evenly;">
+
+
+
+                                    <?php if ($level == $level_id) {
+
+                                    ?>
+
+                                        <span class="badge rounded-pill alert-danger"><?php echo "current"; ?></span>
+
+                                        <h6 class="mb-1" style="font-size: 20px;
+"> <?php echo $position; ?></h6>
+
+                                        <?php
+
+                                    } else {
+
+                                        if ($level < $level_id) {
+                                        ?>
+
+                                            <span class="badge rounded-pill alert-success"><?php echo "completed"; ?></span>
+
+                                        <?php
+                                        } else {
+
+                                        ?>
+
+                                            <span class="badge rounded-pill alert-success"><?php echo "coming..."; ?></span>
+                                        <?php
+
+
+
+                                        }
+
+
+
+
+                                        ?>
+
+
+
+                                        <h6 class="mb-1" style="font-size: 20px;
+color: #63bb92;"> <?php echo $position; ?></h6>
+                                    <?php
+                                    } ?>
+
+
+
+
+                                    <h6 class="mb-1">Target : <?php if ($level == 11) {
+                                                                    echo "No Target";
+                                                                } else { ?>INR <?php echo $target;
+                                                                        } ?></h6>
+                                    <h6 class="mb-1">Incentive : <?php echo $incentive; ?>%</h6>
+                                    <h6 class="mb-1">Salary : INR <?php echo $salary; ?></h6>
+                                </div>
+                            </article>
+                        </div> <!-- card end// -->
+                    </div> <!-- col end// -->
+
+
+
+
+        <?php
+                }
+            }
+        }
+        ?>
+
+
+</section>
+<!-- content-main end// -->
+
+
+
+<script type="text/javascript">
+    if (localStorage.getItem("darkmode")) {
+        var body_el = document.body;
+        body_el.className += 'dark';
+    }
+</script>
+
+<script src="js/jquery-3.5.0.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- ChartJS files-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<!-- Custom JS -->
+<script src="js/scriptc619.js?v=1.0" type="text/javascript"></script>
+
+<!-- ChartJS customize-->
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Sales',
+                    backgroundColor: 'rgb(44, 120, 220)',
+                    borderColor: 'rgb(44, 120, 220)',
+                    data: [18, 17, 4, 3, 2, 20, 25, 31, 25, 22, 20, 9]
+                },
+                {
+                    label: 'Visitors',
+                    backgroundColor: 'rgb(180, 200, 230)',
+                    borderColor: 'rgb(180, 200, 230)',
+                    data: [40, 20, 17, 9, 23, 35, 39, 30, 34, 25, 27, 17]
+                }
+
+            ]
+        },
+
+        // Configuration options go here
+        options: {}
+    });
+</script>
+
+</body>
+
+<!-- Mirrored from www.ecommerce-admin.com/demo/page-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 16:14:11 GMT -->
+
+</html>

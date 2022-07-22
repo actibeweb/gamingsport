@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from www.ecommerce-admin.com/demo/page-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 16:13:57 GMT -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title> Super ADMIN - RealEstates's Marketing </title>
+
+	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+	<link href="css/bootstrapf9e3.css" rel="stylesheet" type="text/css" />
+
+	<!-- custom style -->
+	<link href="css/uif9e3.css" rel="stylesheet" type="text/css" />
+	<link href="css/responsivef9e3.css" rel="stylesheet" />
+
+	<!-- iconfont -->
+	<link rel="stylesheet" href="fonts/material-icon/css/round.css" />
+
+
+	<style>
+		.table {
+			margin-bottom: 10vw;
+		}
+	</style>
+
+	<style>
+		.suc {
+			text-align: center;
+			font-size: 20px;
+			margin-top: 20px;
+			color: #55bb55;
+		}
+
+		.fail {
+
+			text-align: center;
+			font-size: 20px;
+			margin-top: 20px;
+			color: red;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<b class="screen-overlay"></b>
+
+	<aside class="navbar-aside" id="offcanvas_aside">
+		<div class="aside-top">
+			<a href="index.html" class="brand-wrap" style="font-size: 2vw;text-decoration: none;">
+				Super Admin
+			</a>
+			<div>
+				<button class="btn btn-icon btn-aside-minimize"> <i class="text-muted material-icons md-menu_open"></i>
+				</button>
+			</div>
+		</div> <!-- aside-top.// -->
+
+		<nav>
+			<ul class="menu-aside">
+				<li class="menu-item active">
+					<a class="menu-link" href="index.html"> <i class="icon material-icons md-home"></i>
+						<span class="text">Dashboard</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="visits.html"> <i class="icon material-icons md-help"></i>
+						<span class="text">Visits</span>
+					</a>
+				</li>
+
+
+				<li class="menu-item">
+					<a class="menu-link" href="sales.html"> <i class="icon material-icons md-money"></i>
+						<span class="text">Sales</span>
+					</a>
+				</li>
+
+
+				<li class="menu-item">
+					<a class="menu-link" href="properties.html"> <i class="icon material-icons md-house"></i>
+						<span class="text">Properties</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="about.html"> <i class="icon material-icons md-computer"></i>
+						<span class="text">Website Details</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="club.html"> <i class="icon material-icons md-people"></i>
+						<span class="text">Club Management</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="channel-partner.html"> <i class="icon material-icons md-work"></i>
+						<span class="text">Active CPs</span>
+					</a>
+				</li>
+				<li class="menu-item">
+					<a class="menu-link" href="channel-partners.html"> <i class="icon material-icons md-plus"></i>
+						<span class="text">Add Channel Partner</span>
+					</a>
+				</li>
+				<li class="menu-item">
+					<a class="menu-link" href="manage-admin.html"> <i class="icon material-icons md-person"></i>
+						<span class="text">Admin</span>
+					</a>
+				</li>
+
+				<li class="menu-item">
+					<a class="menu-link" href="review.html"> <i class="icon material-icons md-star"></i>
+						<span class="text">Review</span>
+					</a>
+				</li>
+
+
+			
+
+				<li class="menu-item">
+					<a class="menu-link" href="contact.html"> <i class="icon material-icons md-message"></i>
+						<span class="text">Contact Aplications</span>
+					</a>
+				</li>
+			
+
+			</ul>
+			<br>
+			<br>
+		</nav>
+	</aside>
+
+	<main class="main-wrap">
+		<header class="main-header navbar">
+			<div class="col-search">
+				<form class="searchform">
+					
+					<datalist id="search_terms">
+						<option value="Products">
+						<option value="New orders">
+						<option value="Apple iphone">
+						<option value="Ahmed Hassan">
+					</datalist>
+				</form>
+			</div>
+			<div class="col-nav">
+				<button class="btn btn-icon btn-mobile me-auto" data-trigger="#offcanvas_aside"> <i class="md-28 material-icons md-menu"></i> </button>
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link btn-icon" onclick="darkmode(this)" title="Dark mode" href="#"> <i class="material-icons md-nights_stay"></i> </a>
+					</li>
+
+
+				</ul>
+			</div>
+		</header>
+
+
+	
+	
+
+
+        <!-- =====================HTML FORM =============================== -->
+        <!-- ===================================================================== -->
+
+
+
+        <section class="content-main" style="max-width:1200px">
+            <form action="" method="POST" enctype="multipart/form-data">
+
+                <div class="content-header">
+                    <h2 class="content-title">Property Detail</h2>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="card mb-4">
+
+                            <div class="card-body">
+
+                                <div class="mb-4">
+                                    <label for="product_title" class="form-label">Property title</label>
+                                    <input type="text" placeholder="Type here" value="<?php echo $site_title; ?>" name="site_title" class="form-control" id="product_title" readonly>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="product_brand" class="form-label">Address</label>
+                                    <input type="text" placeholder="Type here" value="<?php echo $site_address; ?>" name="site_address" class="form-control" id="product_brand" readonly>
+                                </div>
+                                <div class="row gx-3">
+                                    <div class="col-md-4  mb-3">
+                                        <label for="product_sku" class="form-label">City</label>
+                                        <input type="text" name="site_city" value="<?php echo $site_city; ?>" placeholder="Type here" class="form-control" id="product_sku" readonly>
+                                    </div>
+                                    <div class="col-md-4  mb-3">
+                                        <label for="product_color" class="form-label">State</label>
+                                        <input type="text" name="site_state" value="<?php echo $site_state; ?>" placeholder="Type here" class="form-control" id="product_color" readonly>
+                                    </div>
+                                    <div class="col-md-4  mb-3">
+                                        <label for="product_size" class="form-label">Country</label>
+                                        <input type="text" name="site_country" value="<?php echo $site_country; ?>" placeholder="Type here" class="form-control" id="product_size" readonly>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> <!-- card end// -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div>
+                                    <label class="form-label">Description</label>
+                                    <textarea placeholder="Type here" name="site_about" class="form-control" row="4" readonly><?php echo $site_about; ?></textarea>
+                                </div>
+                            </div>
+                        </div> <!-- card end// -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div>
+                                    <label class="form-label">Property Image</label>
+                                    <img class="form-control" src="../cp/images/sites/<?php echo $site_image; ?>" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div>
+                                    <label class="form-label">Property Video</label>
+                                    <video class="form-control" src="../cp/images/sites/<?php echo $site_video; ?>" autoplay controls></video>
+
+                                </div>
+                            </div>
+                        </div> <!-- card end// -->
+                    </div> <!-- col end// -->
+                    <aside class="col-xl-4 col-lg-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <label class="form-label">Price (INR)</label>
+                                    <input type="text" name="site_prize" value="<?php echo $site_prize; ?>" placeholder="Type here" class="form-control" readonly>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Area (Sq-Ft)</label>
+                                    <input type="text" name="site_area" value="<?php echo $site_area; ?>" placeholder="Type here" class="form-control" readonly>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Property category</label>
+                                    <input type="text" name="site_area" value="<?php echo $site_category; ?>" placeholder="Type here" class="form-control" readonly>
+                                </div>
+
+
+                                <hr>
+                                <h5 class="mb-3">Ameneties</h5>
+
+                                <?php
+                                $site_ameneties_array = explode(',', $site_ameneties);
+
+                                $sa_length = sizeof($site_ameneties_array);
+                                $sa_var = 0;
+                                foreach ($site_ameneties_array as $amenety) {
+                                    $sa_var++;
+                                    if ($sa_var == $sa_length) {
+                                    } else {
+
+                                ?>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="ameneties[]" type="checkbox" value="<?php echo $amenety; ?>" id="product-cat" checked readonly>
+                                            <label class="form-check-label" for="product-cat"><?php echo $amenety; ?> </label>
+                                        </div>
+
+
+
+                                <?php
+                                    }
+                                }
+
+                                ?>
+
+
+
+
+                            </div>
+                        </div> <!-- card end// -->
+                    </aside> <!-- col end// -->
+                </div> <!-- row end// -->
+
+
+                <div class="content-footer">
+                    
+                    <input type="hidden" value="<?php echo $cp_id; ?>" placeholder="Type here" name="cp_id" class="form-control">
+                    <input type="hidden" value="<?php echo $site_id; ?>" placeholder="Type here" name="site_id" class="form-control">
+                    <input type="hidden" value="<?php echo $site_image; ?>" placeholder="Type here" name="old_site_image" class="form-control">
+                    <input type="hidden" value="<?php echo $site_video; ?>" placeholder="Type here" name="old_site_video" class="form-control">
+
+                </div>
+            </form>
+
+
+        </section> <!-- content-main end// -->
+
+
+
+
+
+
+<h2 class="content-title">Property is being deleted by Admin</h2>
+
+<script type="text/javascript">
+    if (localStorage.getItem("darkmode")) {
+        var body_el = document.body;
+        body_el.className += 'dark';
+    }
+</script>
+
+<script src="js/jquery-3.5.0.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- ChartJS files-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<!-- Custom JS -->
+<script src="js/scriptc619.js?v=1.0" type="text/javascript"></script>
+
+<!-- ChartJS customize-->
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Sales',
+                    backgroundColor: 'rgb(44, 120, 220)',
+                    borderColor: 'rgb(44, 120, 220)',
+                    data: [18, 17, 4, 3, 2, 20, 25, 31, 25, 22, 20, 9]
+                },
+                {
+                    label: 'Visitors',
+                    backgroundColor: 'rgb(180, 200, 230)',
+                    borderColor: 'rgb(180, 200, 230)',
+                    data: [40, 20, 17, 9, 23, 35, 39, 30, 34, 25, 27, 17]
+                }
+
+            ]
+        },
+
+        // Configuration options go here
+        options: {}
+    });
+</script>
+
+</body>
+
+<!-- Mirrored from www.ecommerce-admin.com/demo/page-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 16:14:11 GMT -->
+
+</html>

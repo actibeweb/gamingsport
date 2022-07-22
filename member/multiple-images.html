@@ -1,0 +1,200 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from www.ecommerce-admin.com/demo/page-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 16:13:57 GMT -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>RealEstate - Marketing</title>
+
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="css/bootstrapf9e3.css?v=1.1" rel="stylesheet" type="text/css" />
+
+  <!-- custom style -->
+
+  <link href="css/uif9e3.css?v=1.1" rel="stylesheet" type="text/css" />
+  <link href="css/responsivef9e3.css?v=1.1" rel="stylesheet" />
+
+  <!-- iconfont -->
+  <link rel="stylesheet" href="fonts/material-icon/css/round.css" />
+
+  <style>
+
+    .suc{
+      text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #55bb55;
+    }
+
+    .fail{
+
+      text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: red;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <b class="screen-overlay"></b>
+
+  <aside class="navbar-aside" id="offcanvas_aside">
+    <div class="aside-top">
+      <a href="index.html" class="brand-wrap" style="font-size: 2vw;text-decoration: none;">
+        Member Admin
+
+      </a>
+      <div>
+        <button class="btn btn-icon btn-aside-minimize"> <i class="text-muted material-icons md-menu_open"></i>
+        </button>
+      </div>
+    </div> <!-- aside-top.// -->
+
+    <nav>
+      <ul class="menu-aside">
+        <li class="menu-item active">
+          <a class="menu-link" href="index.html"> <i class="icon material-icons md-home"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="business.html"> <i class="icon material-icons md-house"></i>
+            <span class="text">Your Business</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="sales.html"> <i class="icon material-icons md-shopping_cart"></i>
+            <span class="text">Sales</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="profile.html"> <i class="icon material-icons md-person"></i>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+
+
+      </ul>
+      <hr>
+
+      <br>
+      <br>
+    </nav>
+  </aside>
+
+  <main class="main-wrap">
+    <header class="main-header navbar">
+      <div class="col-search">
+        <form class="searchform">
+          <div class="input-group">
+            <input list="search_terms" type="text" class="form-control" placeholder="Search term">
+            <button class="btn btn-light bg" type="button"> <i class="material-icons md-search"></i>
+            </button>
+          </div>
+          <datalist id="search_terms">
+            <option value="Products">
+            <option value="New orders">
+            <option value="Apple iphone">
+            <option value="Ahmed Hassan">
+          </datalist>
+        </form>
+      </div>
+      <div class="col-nav">
+        <button class="btn btn-icon btn-mobile me-auto" data-trigger="#offcanvas_aside"> <i class="md-28 material-icons md-menu"></i> </button>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link btn-icon" onclick="darkmode(this)" title="Dark mode" href="#"> <i class="material-icons md-nights_stay"></i> </a>
+          </li>
+
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#"> <img class="img-xs rounded-circle" src="../cp/images/team/<?php if (empty($member_image)) {
+                                                                                                                                        echo "avatar.jpg";
+                                                                                                                                      } else {
+                                                                                                                                        echo $member_image;
+                                                                                                                                      } ?>" alt="User"></a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href="profile.html">My profile</a>
+
+              <a class="dropdown-item text-danger" href="logout.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+
+<!-- =====================HTML FORM =============================== -->
+<!-- ===================================================================== -->
+
+
+
+<section class="content-main" style="max-width:1200px">
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        <div class="content-header">
+            <h2 class="content-title">Add Site</h2>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-xl-8 col-lg-8">
+
+
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div>
+                            <label class="form-label">Property Image</label>
+                            <input class="form-control" name="images[]" type="file" multiple="multiple" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div>
+                            <label class="form-label">Property Video</label>
+                            <input class="form-control" name="files[]" type="file">
+                        </div>
+                    </div>
+                </div> <!-- card end// -->
+            </div> <!-- col end// -->
+        </div> <!-- row end// -->
+
+        <div class="content-footer">
+            <div>
+                <input type="hidden" value="<?php echo $cp_id; ?>" placeholder="Type here" name="cp_id" class="form-control">
+                <button type="submit" name="submit" class="btn btn-primary">Publish now</a>
+            </div>
+        </div>
+
+    </form>
+
+
+</section> <!-- content-main end// -->
+
+
+
+
+<!-- ===============Footer================= -->
+
+<?php
+include('partials/footer.php');
+?>
+
+
+
+
+
+<!-- ===============================Store Form Data============================== -->
+<!-- ============================================================================ -->
+
+
+
+

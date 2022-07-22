@@ -1,0 +1,39 @@
+<?php
+
+include('../config/constants.php');
+include('login-check.php');
+
+
+
+$sale_sql = "SELECT * FROM tbl_sales WHERE member_username='$member_username' AND cp_id=$cp_id";
+$sale_res = mysqli_query($conn, $sale_sql);
+if ($sale_res == true) {
+  $sale_count = mysqli_num_rows($sale_res);
+  $sale_count_in_rupees = 0;
+
+  if ($sale_count > 0) {
+    while ($rows = mysqli_fetch_assoc($sale_res)) {
+
+      $member_profit = $rows["member_profit"];
+      $sale_count_in_rupees += (float)$member_profit;
+    }
+  }else{
+    $sale_count_in_rupees=0;
+
+  }
+
+
+} else {
+  $sale_count = 0;
+}
+
+
+
+
+
+
+
+
+
+
+

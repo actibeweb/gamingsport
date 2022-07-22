@@ -1,0 +1,295 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from www.ecommerce-admin.com/demo/page-index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 16:13:57 GMT -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>RealEstate - Marketing</title>
+
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="css/bootstrapf9e3.css?v=1.1" rel="stylesheet" type="text/css" />
+
+  <!-- custom style -->
+
+  <link href="css/uif9e3.css?v=1.1" rel="stylesheet" type="text/css" />
+  <link href="css/responsivef9e3.css?v=1.1" rel="stylesheet" />
+
+  <!-- iconfont -->
+  <link rel="stylesheet" href="fonts/material-icon/css/round.css" />
+
+  <style>
+
+    .suc{
+      text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #55bb55;
+    }
+
+    .fail{
+
+      text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: red;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <b class="screen-overlay"></b>
+
+  <aside class="navbar-aside" id="offcanvas_aside">
+    <div class="aside-top">
+      <a href="index.html" class="brand-wrap" style="font-size: 2vw;text-decoration: none;">
+        Member Admin
+
+      </a>
+      <div>
+        <button class="btn btn-icon btn-aside-minimize"> <i class="text-muted material-icons md-menu_open"></i>
+        </button>
+      </div>
+    </div> <!-- aside-top.// -->
+
+    <nav>
+      <ul class="menu-aside">
+        <li class="menu-item active">
+          <a class="menu-link" href="index.html"> <i class="icon material-icons md-home"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="business.html"> <i class="icon material-icons md-house"></i>
+            <span class="text">Your Business</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="sales.html"> <i class="icon material-icons md-shopping_cart"></i>
+            <span class="text">Sales</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="profile.html"> <i class="icon material-icons md-person"></i>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+
+
+      </ul>
+      <hr>
+
+      <br>
+      <br>
+    </nav>
+  </aside>
+
+  <main class="main-wrap">
+    <header class="main-header navbar">
+      <div class="col-search">
+        <form class="searchform">
+          <div class="input-group">
+            <input list="search_terms" type="text" class="form-control" placeholder="Search term">
+            <button class="btn btn-light bg" type="button"> <i class="material-icons md-search"></i>
+            </button>
+          </div>
+          <datalist id="search_terms">
+            <option value="Products">
+            <option value="New orders">
+            <option value="Apple iphone">
+            <option value="Ahmed Hassan">
+          </datalist>
+        </form>
+      </div>
+      <div class="col-nav">
+        <button class="btn btn-icon btn-mobile me-auto" data-trigger="#offcanvas_aside"> <i class="md-28 material-icons md-menu"></i> </button>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link btn-icon" onclick="darkmode(this)" title="Dark mode" href="#"> <i class="material-icons md-nights_stay"></i> </a>
+          </li>
+
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#"> <img class="img-xs rounded-circle" src="../cp/images/team/<?php if (empty($member_image)) {
+                                                                                                                                        echo "avatar.jpg";
+                                                                                                                                      } else {
+                                                                                                                                        echo $member_image;
+                                                                                                                                      } ?>" alt="User"></a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href="profile.html">My profile</a>
+
+              <a class="dropdown-item text-danger" href="logout.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+
+
+<!-- =====================HTML FORM =============================== -->
+<!-- ===================================================================== -->
+
+
+
+<section class="content-main" style="max-width:1200px">
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        <div class="content-header">
+            <h2 class="content-title">Edit Site</h2>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-xl-8 col-lg-8">
+                <div class="card mb-4">
+
+                    <div class="card-body">
+
+                        <div class="mb-4">
+                            <label for="product_title" class="form-label">Property title</label>
+                            <input type="text" placeholder="Type here" value="<?php echo $site_title; ?>" name="site_title" class="form-control" id="product_title" >
+                        </div>
+                        <div class="mb-4">
+                            <label for="product_brand" class="form-label">Address</label>
+                            <input type="text" placeholder="Type here" value="<?php echo $site_address; ?>" name="site_address" class="form-control" id="product_brand">
+                        </div>
+                        <div class="row gx-3">
+                            <div class="col-md-4  mb-3">
+                                <label for="product_sku" class="form-label">City</label>
+                                <input type="text" name="site_city" value="<?php echo $site_city; ?>" placeholder="Type here" class="form-control" id="product_sku">
+                            </div>
+                            <div class="col-md-4  mb-3">
+                                <label for="product_color" class="form-label">State</label>
+                                <input type="text" name="site_state" value="<?php echo $site_state; ?>" placeholder="Type here" class="form-control" id="product_color">
+                            </div>
+                            <div class="col-md-4  mb-3">
+                                <label for="product_size" class="form-label" >Country</label>
+                                <input type="text" name="site_country" value="<?php echo $site_country; ?>" placeholder="Type here" class="form-control" id="product_size">
+                            </div>
+                        </div>
+
+                    </div>
+                </div> <!-- card end// -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div>
+                            <label class="form-label">Description</label>
+                            <textarea placeholder="Type here" name="site_about" class="form-control" row="4"><?php echo $site_about; ?></textarea>
+                        </div>
+                    </div>
+                </div> <!-- card end// -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div>
+                            <label class="form-label">Property Image</label>
+                            <img class="form-control" src="./images/sites/<?php echo $site_image; ?>" alt="">
+                            <input class="form-control" name="site_image" type="file">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div>
+                            <label class="form-label">Property Video</label>
+                            <video class="form-control" src="./images/sites/<?php echo $site_video; ?>" autoplay controls></video>
+                            <input class="form-control" name="file" type="file">
+                        </div>
+                    </div>
+                </div> <!-- card end// -->
+            </div> <!-- col end// -->
+            <aside class="col-xl-4 col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <label class="form-label">Price (INR)</label>
+                            <input type="text" name="site_prize" value="<?php echo $site_prize; ?>" placeholder="Type here" class="form-control">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Area (Sq-Ft)</label>
+                            <input type="text" name="site_area" value="<?php echo $site_area; ?>" placeholder="Type here" class="form-control">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Property category</label>
+                            <select class="form-select" name="site_category" >
+                                <option value="House">House</option>
+                                <option value="<?php echo $site_category; ?>" selected><?php echo $site_category; ?></option>
+                                <option value="Apartment">Apartment</option>
+                                <option value="Villas">Villas</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Office">Office</option>
+                                <option value="Garage">Garage</option>
+                            </select>
+                        </div>
+
+
+                        <hr>
+                        <h5 class="mb-3">Ameneties</h5>
+
+                        <?php 
+                            $site_ameneties_array = explode(',', $site_ameneties);
+
+                            $sa_length= sizeof($site_ameneties_array);
+                            $sa_var=0;
+                            foreach ($site_ameneties_array as $amenety) {
+                                $sa_var++;
+                                if($sa_var==$sa_length){
+                                    
+                                }else{
+
+                                ?>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="ameneties[]" type="checkbox" value="<?php echo $amenety ; ?>" id="product-cat" checked>
+                                    <label class="form-check-label" for="product-cat"><?php echo $amenety ; ?> </label>
+                                </div>
+
+                                <?php
+                                }
+
+                              
+                            }
+
+                        ?>
+
+
+
+                        
+                    </div>
+                </div> <!-- card end// -->
+            </aside> <!-- col end// -->
+        </div> <!-- row end// -->
+
+
+        <div class="content-footer">
+            <input type="hidden" value="<?php echo $cp_id; ?>" placeholder="Type here" name="cp_id" class="form-control">
+            <input type="hidden" value="<?php echo $site_id; ?>" placeholder="Type here" name="site_id" class="form-control">
+            <input type="hidden" value="<?php echo $site_image; ?>" placeholder="Type here" name="old_site_image" class="form-control">
+            <input type="hidden" value="<?php echo $site_video; ?>" placeholder="Type here" name="old_site_video" class="form-control">
+            <button type="submit" name="submit" class="btn btn-primary">Update now</a>
+           
+        </div>
+    </form>
+
+
+</section> <!-- content-main end// -->
+
+
+
+
+<!-- ===============Footer================= -->
+
+<?php
+include('partials/footer.php');
+?>
+
+
+
+
+
+<!-- ===============================Store Form Data============================== -->
+<!-- ============================================================================ -->
+

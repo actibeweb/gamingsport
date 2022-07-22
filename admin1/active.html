@@ -1,0 +1,52 @@
+<?php
+include('../config/constants.php');
+?>
+<?php
+
+$site_id = $_GET['site_id'];
+$active = $_GET['active'];
+
+if($active){
+
+
+    $sql = "UPDATE tbl_sites SET
+    featured=0
+    WHERE site_id=$site_id
+    ";
+  
+    $res = mysqli_query($conn, $sql);
+  
+    if ($res == TRUE) {
+  
+      $_SESSION['update'] = "<h1 class='suc'>Property Details Updated!!</h1>";
+      echo ("<script>location.href = '" . SITEURL . "/admin/properties.php';</script>");
+    } else {
+  
+      $_SESSION['update'] = "<h1 class='fail'>Property Details not Updated!! Try Again<h1>";
+      echo ("<script>location.href = '" . SITEURL . "/admin/poperties.php';</script>");
+    }
+
+}else{
+
+    
+  $sql = "UPDATE tbl_sites SET
+  featured=1
+  WHERE site_id=$site_id
+  ";
+
+  $res = mysqli_query($conn, $sql);
+
+  if ($res == TRUE) {
+
+    $_SESSION['update'] = "<h1 class='suc'>Property Details Updated!!</h1>";
+    echo ("<script>location.href = '" . SITEURL . "/admin/properties.php';</script>");
+  } else {
+
+    $_SESSION['update'] = "<h1 class='fail'>Property Details not Updated!! Try Again<h1>";
+    echo ("<script>location.href = '" . SITEURL . "/admin/poperties.php';</script>");
+  }
+}
+
+
+
+?>
